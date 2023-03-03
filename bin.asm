@@ -1,15 +1,15 @@
 section .data
 cnst db 1
-test1 dd 4095
+test1 dd 4294967295
 section .bss
-mas resb 10
+mas resb 100
 section .text
 global _start
 _start:
 
 
-mov ebx, 16
-mov ecx, 9
+mov ebx, 32
+mov ecx, 99
 
 _loop:
 mov al, [cnst]
@@ -22,14 +22,14 @@ dec ecx
 cmp ebx, 0
 je _print
 
-shr word[test1], 1
+shr dword[test1], 1
 jmp _loop
 
 _print:
 mov eax, 4
 mov ebx, 1
 mov ecx, mas
-mov edx, 10
+mov edx, 100
 int 0x80
 
 ;_exit:
