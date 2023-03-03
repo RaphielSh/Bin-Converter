@@ -5,5 +5,5 @@
 #pacman -S nasm
 
 
-nasm -felf32 bin.asm && ld -m elf_i386 bin.o -o bin.exe && ./bin.exe
+nasm -felf64 bin.asm && ld bin.o -o bin.exe && ./bin.exe
 

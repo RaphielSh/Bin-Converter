@@ -1,6 +1,6 @@
 section .data
 cnst db 1
-test1 dd 4294967295
+test1 dq 4294967297
 section .bss
 mas resb 100
 section .text
@@ -8,7 +8,7 @@ global _start
 _start:
 
 
-mov ebx, 32
+mov ebx, 64
 mov ecx, 99
 
 _loop:
@@ -22,7 +22,7 @@ dec ecx
 cmp ebx, 0
 je _print
 
-shr dword[test1], 1
+shr qword[test1], 1
 jmp _loop
 
 _print:
