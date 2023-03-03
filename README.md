@@ -5,8 +5,8 @@ This is pretty simple assembly program that converts a numbers from 0 to 2^64 to
 
 How to run program:
 
-Download it.
-Open bin.asm and change test1 variable.
-Run ./comp.sh.
+1. Download it.
+2. Open bin.asm and change test1 variable.
+3. Run ./comp.sh.
 
 Comp.sh will automatically compile .asm file with NASM. Then it will run compiled program.
